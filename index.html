@@ -1179,25 +1179,74 @@
                 </div>
                 
                 <!-- Chart of Accounts Page -->
-                <div id="page-chart-of-accounts" class="hidden">
-                    <div class="page-header">
-                        <h1 class="page-title">Chart of Accounts</h1>
-                        <p class="page-subtitle">IFRS 18 Compliant Account Structure</p>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">General Ledger Accounts</h2>
-                            <button class="btn btn-primary" onclick="showModal('accountModal')">+ New Account</button>
-                        </div>
-                        <div class="table-container">
-                            <table id="accountsTable">
-                                <thead><tr><th>Account Code</th><th>Account Name</th><th>Type</th><th>Category</th><th class="text-right">Balance</th><th>Actions</th></tr></thead>
-                                <tbody id="accountsTableBody"></tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+               <div id="page-chart-of-accounts" class="hidden">
+    <div class="page-header">
+        <h1 class="page-title">Chart of Accounts</h1>
+        <p class="page-subtitle">IFRS 18 Compliant Account Structure - Automatically updates Financial Statements</p>
+    </div>
+    
+    <div class="stats-grid mb-3">
+        <div class="stat-card" onclick="showAccountSummary()" style="cursor: pointer;">
+            <div class="stat-label">Total Accounts</div>
+            <div class="stat-value" id="totalAccountsStat">0</div>
+            <div class="stat-change">Click to view summary</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Total Assets</div>
+            <div class="stat-value" id="totalAssetsStat">MWK 0</div>
+            <div class="stat-change positive">Balance Sheet</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Total Liabilities</div>
+            <div class="stat-value" id="totalLiabilitiesStat">MWK 0</div>
+            <div class="stat-change negative">Balance Sheet</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Net Equity</div>
+            <div class="stat-value" id="totalEquityStat">MWK 0</div>
+            <div class="stat-change">Balance Sheet</div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-header">
+            <h2 class="card-title">General Ledger Accounts</h2>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <button class="btn btn-secondary btn-sm" onclick="showAccountSummary()">📊 View Summary</button>
+                <button class="btn btn-success btn-sm" onclick="exportChartOfAccounts()">📥 Export CSV</button>
+                <button class="btn btn-primary" onclick="showAccountModal()">+ New Account</button>
+            </div>
+        </div>
+        <div class="table-container">
+            <table id="accountsTable">
+                <thead>
+                    <tr>
+                        <th>Account Code</th>
+                        <th>Account Name</th>
+                        <th>Type</th>
+                        <th>Category</th>
+                        <th class="text-right">Balance</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="accountsTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="card mt-3">
+        <div class="card-header">
+            <h3 class="card-title">💡 Quick Tips</h3>
+        </div>
+        <ul style="padding: 20px; margin-left: 20px; line-height: 2;">
+            <li><strong>Account Codes:</strong> Use consistent numbering (1xxx = Assets, 2xxx = Liabilities, 3xxx = Equity, 4xxx = Revenue, 5xxx+ = Expenses)</li>
+            <li><strong>Categories:</strong> IFRS 18 compliant categories automatically organize accounts in financial statements</li>
+            <li><strong>Balances:</strong> Use negative values for credit balance accounts (Liabilities, Revenue)</li>
+            <li><strong>Integration:</strong> Changes here automatically update Balance Sheet and Income Statement</li>
+            <li><strong>Journal Entries:</strong> All accounts are available when creating journal entries</li>
+        </ul>
+    </div>
+</div>
                 
                 <!-- Income Statement Page -->
                 <div id="page-income-statement" class="hidden">
