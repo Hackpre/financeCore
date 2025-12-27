@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceCore ERP | IFRS 18 Compliant</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="landing.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <!-- Landing Page -->
+    <div id="landingPage" class="landing-page">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <nav class="landing-nav">
+                <div class="nav-container">
+                    <div class="landing-logo">FinanceCore ERP</div>
+                    <div class="nav-links">
+                        <a href="#features" class="nav-link">Features</a>
+                        <a href="#pricing" class="nav-link">Pricing</a>
+                        <a href="#testimonials" class="nav-link">Testimonials</a>
+                        <button class="btn btn-login" onclick="showLoginModal()">Sign In</button>
+                    </div>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+                </div>
+            </nav>
+            
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="hero-highlight">IFRS 18 Compliant</span> ERP for<br>Modern Businesses & NGOs
+                </h1>
+                <p class="hero-subtitle">
+                    Streamline your financial operations with AI-powered insights, real-time reporting, 
+                    and complete compliance — all in one intelligent platform.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Uptime</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Companies</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support</div>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-lg" onclick="startTrial()">
+                        🚀 Start 15-Day Free Trial
+                    </button>
+                    <button class="btn btn-outline btn-lg" onclick="scrollToFeatures()">
+                        📋 View Features
+                    </button>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="dashboard-preview">
+                    <div class="preview-header">
+                        <div class="preview-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="preview-title">FinanceCore Dashboard</div>
+                    </div>
+                    <div class="preview-content">
+                        <div class="preview-chart"></div>
+                        <div class="preview-stats">
+                            <div class="preview-stat">📈 Revenue: <strong>MWK 125.4M</strong></div>
+                            <div class="preview-stat">📊 Profit: <strong>MWK 32.8M</strong></div>
+                            <div class="preview-stat">💰 Cash Flow: <strong>+15.2%</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Features Section -->
+        <section id="features" class="features-section">
+            <div class="container">
+                <h2 class="section-title">Everything You Need for Financial Excellence</h2>
+                <p class="section-subtitle">Powerful tools designed for both Corporate and NGO organizations</p>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🤖</div>
+                        <h3 class="feature-title">AI Cash Flow Predictions</h3>
+                        <p class="feature-description">
+                            Get accurate 6-month cash flow forecasts and actionable insights powered by artificial intelligence.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3 class="feature-title">IFRS 18 Compliant Reporting</h3>
+                        <p class="feature-description">
+                            Automatically generate IFRS 18 compliant financial statements with the new income statement categories.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🏦</div>
+                        <h3 class="feature-title">Bank Reconciliation</h3>
+                        <p class="feature-description">
+                            Reconcile bank statements in minutes with intelligent matching and discrepancy detection.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">👥</div>
+                        <h3 class="feature-title">Multi-User Collaboration</h3>
+                        <p class="feature-description">
+                            Work together with your team with role-based permissions and real-time updates.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">📦</div>
+                        <h3 class="feature-title">Inventory Management</h3>
+                        <p class="feature-description">
+                            Track stock levels, automate reordering, and manage inventory across multiple locations.
+                        </p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">🌐</div>
+                        <h3 class="feature-title">NGO & Corporate Modes</h3>
+                        <p class="feature-description">
+                            Switch between NGO and Corporate modes with tailored features for each organization type.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Benefits Section -->
+        <section class="benefits-section">
+            <div class="container">
+                <h2 class="section-title">Transform Your Financial Operations</h2>
+                
+                <div class="benefits-container">
+                    <div class="benefit">
+                        <div class="benefit-number">01</div>
+                        <div class="benefit-content">
+                            <h3>Save 20+ Hours Monthly</h3>
+                            <p>Automate manual processes like bank reconciliation, invoice generation, and report creation.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit">
+                        <div class="benefit-number">02</div>
+                        <div class="benefit-content">
+                            <h3>Reduce Errors by 95%</h3>
+                            <p>Automated calculations and validation rules eliminate manual data entry mistakes.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit">
+                        <div class="benefit-number">03</div>
+                        <div class="benefit-content">
+                            <h3>Make Data-Driven Decisions</h3>
+                            <p>Access real-time financial insights and AI-powered predictions for better strategic planning.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="benefit">
+                        <div class="benefit-number">04</div>
+                        <div class="benefit-content">
+                            <h3>Stay Audit-Ready Always</h3>
+                            <p>Complete audit trail, version control, and compliance-ready reports at your fingertips.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing-section">
+            <div class="container">
+                <h2 class="section-title">Simple, Transparent Pricing</h2>
+                <p class="section-subtitle">No hidden fees, no long-term contracts</p>
+                
+                <div class="pricing-container">
+                    <div class="pricing-card">
+                        <div class="pricing-badge">FREE TRIAL</div>
+                        <h3 class="pricing-plan">Free Trial</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$0</span>
+                            <span class="price-period">/15 days</span>
+                        </div>
+                        <p class="pricing-description">Full access to all features</p>
+                        
+                        <ul class="pricing-features">
+                            <li>✅ All features unlocked</li>
+                            <li>✅ Up to 5 users</li>
+                            <li>✅ 50 invoices/month</li>
+                            <li>✅ Basic support</li>
+                            <li>✅ 15 days full access</li>
+                        </ul>
+                        
+                        <button class="btn btn-primary btn-block" onclick="startTrial()">
+                            Start Free Trial
+                        </button>
+                    </div>
+                    
+                    <div class="pricing-card popular">
+                        <div class="pricing-badge">MOST POPULAR</div>
+                        <h3 class="pricing-plan">Professional</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$49</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="pricing-description">Perfect for growing businesses</p>
+                        
+                        <ul class="pricing-features">
+                            <li>✅ Unlimited users</li>
+                            <li>✅ Unlimited invoices</li>
+                            <li>✅ Multi-company support</li>
+                            <li>✅ Priority support</li>
+                            <li>✅ Advanced reports</li>
+                            <li>✅ API access</li>
+                        </ul>
+                        
+                        <button class="btn btn-primary btn-block" onclick="startTrial()">
+                            Get Started
+                        </button>
+                    </div>
+                    
+                    <div class="pricing-card">
+                        <div class="pricing-badge">ENTERPRISE</div>
+                        <h3 class="pricing-plan">Enterprise</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$199</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                        <p class="pricing-description">For large organizations</p>
+                        
+                        <ul class="pricing-features">
+                            <li>✅ Everything in Professional</li>
+                            <li>✅ White-label option</li>
+                            <li>✅ Dedicated support</li>
+                            <li>✅ Custom integrations</li>
+                            <li>✅ On-premise deployment</li>
+                            <li>✅ SLA guarantee</li>
+                        </ul>
+                        
+                        <button class="btn btn-outline btn-block" onclick="showContactModal()">
+                            Contact Sales
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="pricing-note">
+                    All plans include IFRS 18 compliance, AI analytics, and regular updates.
+                </div>
+            </div>
+        </section>
+        
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <h2 class="section-title">Trusted by Finance Teams</h2>
+                
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "FinanceCore reduced our month-end closing from 5 days to just 2 days. The IFRS 18 reports are a game-changer for our audit process."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">CK</div>
+                            <div class="author-info">
+                                <div class="author-name">Chikondi K.</div>
+                                <div class="author-role">Finance Director, Manufacturing Co.</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "As an NGO, we needed donor-specific reporting. FinanceCore's NGO mode gives us exactly what we need for grant compliance."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">TM</div>
+                            <div class="author-info">
+                                <div class="author-name">Temwanani M.</div>
+                                <div class="author-role">Program Manager, Health NGO</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            "The AI cash flow predictions helped us avoid a liquidity crisis. We saw a potential shortfall 3 months in advance."
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">RJ</div>
+                            <div class="author-info">
+                                <div class="author-name">Robert J.</div>
+                                <div class="author-role">CFO, Retail Chain</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <h2 class="cta-title">Ready to Transform Your Financial Management?</h2>
+                <p class="cta-subtitle">Join 500+ companies already using FinanceCore ERP</p>
+                
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-xl" onclick="startTrial()">
+                        🚀 Start Your Free Trial
+                    </button>
+                    <button class="btn btn-outline btn-xl" onclick="showDemoModal()">
+                        📽️ Watch Demo
+                    </button>
+                </div>
+                
+                <div class="cta-features">
+                    <div class="cta-feature">✅ No credit card required</div>
+                    <div class="cta-feature">✅ Full access for 15 days</div>
+                    <div class="cta-feature">✅ Cancel anytime</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer class="landing-footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-brand">
+                        <div class="landing-logo">FinanceCore ERP</div>
+                        <p class="footer-tagline">IFRS 18 Compliant Financial Management</p>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Product</h4>
+                            <a href="#features">Features</a>
+                            <a href="#pricing">Pricing</a>
+                            <a href="#testimonials">Testimonials</a>
+                            <a href="#" onclick="showDemoModal()">Demo</a>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Company</h4>
+                            <a href="#" onclick="showContactModal()">Contact</a>
+                            <a href="#" onclick="showContactModal()">Support</a>
+                            <a href="#" onclick="showPrivacyModal()">Privacy</a>
+                            <a href="#" onclick="showTermsModal()">Terms</a>
+                        </div>
+                        
+                        <div class="footer-column">
+                            <h4>Connect</h4>
+                            <a href="#">LinkedIn</a>
+                            <a href="#">Twitter</a>
+                            <a href="#">Facebook</a>
+                            <a href="/cdn-cgi/l/email-protection#added8ddddc2dfd9edcbc4c3ccc3cec8cec2dfc883cec2c0">Email</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>© 2024 FinanceCore ERP. All rights reserved. Designed with ❤️ for finance professionals.</p>
+                    <p>+265 888 879 052 | <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e1929491918e9395a187888f808f8284828e9384cf828e8c">[email&#160;protected]</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Main App (Hidden Initially) -->
+    <div id="mainApp" class="app-container">
+        <div class="mobile-overlay" id="mobileOverlay"></div>
+        
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="brand">
+                <img src="" id="sidebarLogo" class="company-logo" alt="Logo" style="display: none;">
+                <div class="brand-text">
+                    <h1 id="companyName">FinanceCore</h1>
+                    <p>IFRS 18 Compliant</p>
+                </div>
+            </div>
+            
+            <div class="settings-bar">
+                <div class="setting-row">
+                    <span>🌓 Dark Mode</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="darkModeToggle">
+                        <span class="toggle-slider"></span>
+                    </label>
+                </div>
+                <div class="setting-row" style="flex-direction: column; align-items: stretch; gap: 8px;">
+                    <span>🏢 Industry Mode</span>
+                    <div class="industry-selector">
+                        <button class="industry-option active" data-industry="corporate">Corp</button>
+                        <button class="industry-option" data-industry="ngo">NGO</button>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="nav-menu">
+                <div class="nav-section">
+                    <div class="nav-section-title">Main</div>
+                    <div class="nav-item active" data-page="dashboard"><span class="nav-item-icon">📊</span> Dashboard</div>
+                    <div class="nav-item" data-page="ai-analytics"><span class="nav-item-icon">🤖</span> AI Cash Flow</div>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Accounting</div>
+                    <div class="nav-item" data-page="journal"><span class="nav-item-icon">📖</span> Journal Entries</div>
+                    <div class="nav-item" data-page="chart-of-accounts"><span class="nav-item-icon">🗂️</span> Chart of Accounts</div>
+                    <div class="nav-item" data-page="bank-reconciliation"><span class="nav-item-icon">🏦</span> Bank Reconciliation</div>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Sales</div>
+                    <div class="nav-item" data-page="customers"><span class="nav-item-icon">👥</span> Customers</div>
+                    <div class="nav-item" data-page="quotations"><span class="nav-item-icon">📋</span> Quotations</div>
+                    <div class="nav-item" data-page="invoices"><span class="nav-item-icon">📄</span> Invoices</div>
+                    <div class="nav-item" data-page="receipts"><span class="nav-item-icon">💰</span> Receipts</div>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Inventory</div>
+                    <div class="nav-item" data-page="products"><span class="nav-item-icon">📦</span> Products</div>
+                    <div class="nav-item" data-page="stock"><span class="nav-item-icon">📊</span> Stock Management</div>
+                </div>
+                
+                <div class="nav-section" id="ngoSection" style="display: none;">
+                    <div class="nav-section-title">NGO Specific</div>
+                    <div class="nav-item" data-page="donors"><span class="nav-item-icon">💝</span> Donors & Grants</div>
+                    <div class="nav-item" data-page="projects"><span class="nav-item-icon">🎯</span> Projects</div>
+                    <div class="nav-item" data-page="compliance"><span class="nav-item-icon">✅</span> Compliance Reports</div>
+                </div>
+                
+                <div class="nav-section" id="corporateSection">
+                    <div class="nav-section-title">Corporate Specific</div>
+                    <div class="nav-item" data-page="payroll"><span class="nav-item-icon">💵</span> Payroll</div>
+                    <div class="nav-item" data-page="assets"><span class="nav-item-icon">🏭</span> Fixed Assets</div>
+                </div>
+                
+                <div class="nav-section">
+                    <div class="nav-section-title">Reports (IFRS 18)</div>
+                    <div class="nav-item" data-page="income-statement"><span class="nav-item-icon">📈</span> Income Statement</div>
+                    <div class="nav-item" data-page="balance-sheet"><span class="nav-item-icon">⚖️</span> Balance Sheet</div>
+                    <div class="nav-item" data-page="cashflow"><span class="nav-item-icon">💵</span> Cash Flow Statement</div>
+                    <div class="nav-item" data-page="trial-balance"><span class="nav-item-icon">📊</span> Trial Balance</div>
+                </div> 
+                <div class="nav-section">
+                    <div class="nav-section-title">Settings</div>
+                    <div class="nav-item" data-page="team"><span class="nav-item-icon">👥</span> Team Management</div>
+                    <div class="nav-item" data-page="company-profile"><span class="nav-item-icon">🏢</span> Company Profile</div>
+                    <div class="nav-item" onclick="logout()" style="cursor: pointer; color: #ef4444;">
+                        <span class="nav-item-icon">🚪</span> Logout
+                    </div>
+                </div>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="top-bar-left">
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+                    <div class="search-bar">
+                        <span>🔍</span>
+                        <input type="text" placeholder="Search transactions, customers, products..." id="globalSearch">
+                    </div>
+                </div>
+                <div class="user-info">
+                    <div class="user-details" style="display: none;">
+                        <div style="font-weight: 600; font-size: 14px;" id="userName">Austin Phiri</div>
+                        <div style="font-size: 12px; color: var(--text-secondary);" id="userRole">Finance Director</div>
+                    </div>
+                    <div class="user-avatar" id="userAvatar">AP</div>
+                </div>
+            </header>
+            
+            <div class="content-area" id="contentArea">
+                <!-- Dashboard -->
+                <div id="page-dashboard">
+                    <div class="page-header">
+                        <h1 class="page-title">Dashboard</h1>
+                        <p class="page-subtitle">Financial Overview & Key Metrics</p>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-label">Total Revenue (YTD)</div>
+                            <div class="stat-value">MWK 125.4M</div>
+                            <div class="stat-change positive"><span>↑</span> 12.5% from last year</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">Net Profit</div>
+                            <div class="stat-value">MWK 32.8M</div>
+                            <div class="stat-change positive"><span>↑</span> 8.3% margin</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">Outstanding Receivables</div>
+                            <div class="stat-value">MWK 18.2M</div>
+                            <div class="stat-change negative"><span>↓</span> 3 invoices overdue</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">Inventory Value</div>
+                            <div class="stat-value">MWK 45.6M</div>
+                            <div class="stat-change positive"><span>↑</span> 234 items in stock</div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Recent Transactions</h2>
+                            <button class="btn btn-primary btn-sm" onclick="showModal('journalModal')">+ New Entry</button>
+                        </div>
+                        <div class="table-container">
+                            <table id="recentTransactionsTable">
+                                <thead>
+                                    <tr><th>Date</th><th>Reference</th><th>Description</th><th>Account</th><th class="text-right">Debit</th><th class="text-right">Credit</th><th>Status</th></tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Pending Invoices</h2>
+                            <button class="btn btn-primary btn-sm" onclick="navigateTo('invoices')">View All</button>
+                        </div>
+                        <div class="table-container">
+                            <table id="pendingInvoicesTable">
+                                <thead>
+                                    <tr><th>Invoice #</th><th>Customer</th><th>Date</th><th>Due Date</th><th class="text-right">Amount</th><th>Status</th><th>Actions</th></tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- AI Analytics Page -->
+                <div id="page-ai-analytics" class="hidden">
+                    <div class="page-header">
+                        <h1 class="page-title">AI Cash Flow Analytics</h1>
+                        <p class="page-subtitle">Predictive cash flow analysis and insights powered by AI</p>
+                    </div>
+                    
+                    <div class="stats-grid mb-3">
+                        <div class="stat-card">
+                            <div class="stat-label">Predicted Cash Balance (30 days)</div>
+                            <div class="stat-value">MWK 28.4M</div>
+                            <div class="stat-change positive"><span>↑</span> 15.2% increase expected</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">Risk Score</div>
+                            <div class="stat-value">LOW</div>
+                            <div class="stat-change positive"><span>✓</span> Healthy cash position</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">Predicted Shortfall Risk</div>
+                            <div class="stat-value">8%</div>
+                            <div class="stat-change negative"><span>↓</span> Minimal risk detected</div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <h2 class="card-title">Cash Flow Predictions <span class="ai-badge">🤖 AI-POWERED</span></h2>
+                            <button class="btn btn-primary" onclick="generateAIPredictions()">🔄 Generate New Predictions</button>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <canvas id="cashflowChart" width="400" height="300"></canvas>
+                        </div>
+                        
+                        <div id="aiPredictionsContainer">
+                            <!-- Predictions will be loaded here -->
+                            <div style="text-align: center; padding: 40px; color: var(--text-secondary);">
+                                Click "Generate New Predictions" to see AI cash flow forecasts
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <h2 class="card-title">AI Insights & Recommendations</h2>
+                        </div>
+                        <div id="aiInsightsContainer">
+                            <div class="prediction-card">
+                                <div class="prediction-month">💡 Top Insight</div>
+                                <p>Your cash position is strong. Consider early payment discounts with suppliers to improve margins.</p>
+                            </div>
+                            <div class="prediction-card">
+                                <div class="prediction-month">⚠️ Risk Alert</div>
+                                <p>Monitor receivables from Global Trading Ltd - payment is 15 days overdue.</p>
+                            </div>
+                            <div class="prediction-card">
+                                <div class="prediction-month">📈 Opportunity</div>
+                                <p>Based on seasonal trends, consider increasing inventory of Premium Widgets by 20% for Q1.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">What-If Scenarios</h2>
+                        </div>
+                        <div class="form-grid mb-3">
+                            <div class="form-group">
+                                <label class="form-label">Scenario Name</label>
+                                <input type="text" class="form-input" id="scenarioName" placeholder="e.g., New Client Acquisition">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Expected Revenue Impact</label>
+                                <input type="number" class="form-input" id="revenueImpact" placeholder="MWK">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Additional Costs</label>
+                                <input type="number" class="form-input" id="additionalCosts" placeholder="MWK">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Timeframe (months)</label>
+                                <input type="number" class="form-input" id="scenarioMonths" value="6" min="1" max="24">
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" onclick="runScenarioAnalysis()">Run Scenario Analysis</button>
+                        
+                        <div id="scenarioResults" class="mt-3" style="display: none;">
+                            <div class="prediction-card">
+                                <h4>Scenario Results</h4>
+                                <div id="scenarioDetails"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Customers Page -->
+                <div id="page-customers" class="hidden">
+                    <div class="page-header">
+                        <h1 class="page-title">Customers</h1>
+                        <p class="page-subtitle">Manage customer relationships and accounts</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Customer List</h2>
+                            <button class="btn btn-primary" onclick="showModal('customerModal')">+ New Customer</button>
+                        </div>
+                        <div class="table-container">
+                            <table id="customersTable">
+                                <thead><tr><th>Customer Name</th><th>Contact Person</th><th>Email</th><th>Phone</th><th class="text-right">Receivables</th><th>Actions</th></tr></thead>
+                                <tbody id="customersTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Products Page -->
+                <div id="page-products" class="hidden">
+                    <div class="page-header">
+                        <h1 class="page-title">Products & Services</h1>
+                        <p class="page-subtitle">Manage inventory items and service offerings</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Product Catalog</h2>
+                            <button class="btn btn-primary" onclick="showModal('productModal')">+ New Product</button>
+                        </div>
+                        <div class="table-container">
+                            <table id="productsTable">
+                                <thead><tr><th>Product Code</th><th>Name</th><th>Category</th><th class="text-right">Unit Price</th><th class="text-right">Stock</th><th>Status</th><th>Actions</th></tr></thead>
+                                <tbody id="productsTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Invoices Page -->
+                <div id="page-invoices" class="hidden">
+                    <div class="page-header">
+                        <h1 class="page-title">Invoices</h1>
+                        <p class="page-subtitle">Create and manage customer invoices</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">All Invoices</h2>
+                            <button class="btn btn-primary" onclick="showModal('invoiceModal')">+ New Invoice</button>
+                        </div>
+                        <div class="table-container">
+                            <table id="invoicesTable">
+                                <thead><tr><th>Invoice #</th><th>Customer</th><th>Date</th><th>Due Date</th><th class="text-right">Amount</th><th>Status</th><th>Actions</th></tr></thead>
+                                <tbody id="invoicesTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quotations Page -->
+                <div id="page-quotations" class="hidden">
+                    <div class="page-header">
+                        <h1 class="page-title">Quotations</h1>
+                        <p class="page-subtitle">Create and manage sales quotations</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">All Quotations</h2>
+                            <button class="btn btn-primary" onclick="showQuotationModal()">+ New Quotation</button>
+                        </div>
+                        <div class="table-container">
+                            <table id="quotationsTable">
+                                <thead>
+                                    <tr>
+                                        <th>Quote #</th>
+                                        <th>Customer</th>
+                                        <th>Date</th>
+                                        <th>Valid Until</th>
+                                        <th class="text-right">Amount</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="quotationsTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Receipts Page -->
+                <div id="page-receipts" class="hidden">
+                    <div class="page-header">
+                        <h1 class="page-title">Receipts</h1>
+                        <p class="page-subtitle">Record and manage payment receipts</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Payment Receipts</h2>
+                            <button class="btn btn-primary" onclick="showNotification('Receipt functionality coming soon!', false, 'info')">+ New Receipt</button>
+                        </div>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Receipt #</th>
+                                        <th>Date</th>
+                                        <th>Customer</th>
+                                        <th>Invoice #</th>
+                                        <th class="text-right">Amount</th>
+                                        <th>Method</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="7" class="text-center">No receipts found. This feature will be available soon.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Stock Management Page -->
+                <div id="page-stock" class="hidden">
+                    <div class="page-header">
+                        <h1 class="page-title">Stock Management</h1>
+                        <p class="page-subtitle">Track inventory movements and stock levels</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Stock Movements</h2>
+                            <button class="btn btn-primary" onclick="showNotification('Stock movement functionality coming soon!', false, 'info')">+ Record Movement</button>
+                        </div>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Product</th>
+                                        <th>Type</th>
+                                        <th class="text-right">Quantity</th>
+                                        <th>Reference</th>
+                                        <th>Notes</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="6" class="text-center">No stock movements recorded. This feature will be available soon.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projects Page (NGO Mode) -->
+                <div id="page-projects" class="hidden">
+                    <div class="page-header">
+                        <h1 class="page-title">Projects</h1>
+                        <p class="page-subtitle">Manage NGO projects and activities</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Active Projects</h2>
+                            <button class="btn btn-primary" onclick="showNotification('Project management functionality coming soon!', false, 'info')">+ New Project</button>
+                        </div>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Project Name</th>
+                                        <th>Grant</th>
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
+                                        <th class="text-right">Budget</th>
+                                        <th class="text-right">Spent</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="8" class="text-center">No projects found. This feature will be available soon.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Donors Page (NGO Mode) -->
+                <div id="page-donors" class="hidden">
+                    <div class="page-header">
+                        <h1 class="page-title">Donors & Grants</h1>
+                        <p class="page-subtitle">Manage donor relationships and grant funding</p>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <h2 class="card-title">Donors</h2>
+                            <button class="btn btn-primary" onclick="showDonorModal()">+ New Donor</button>
+                        </div>
+                        <div class="table-container">
+                            <table id="donorsTable">
+                                <thead>
+                                    <tr>
+                                        <th>Donor Name</th>
+                                        <th>Type</th>
+                                        <th>Contact Person</th>
+                                        <th>Email</th>
+                                        <th class="text-right">Total Funding</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="donorsTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Grants</h2>
+                            <button class="btn btn-primary" onclick="showGrantModal()">+ New Grant</button>
+                        </div>
+                        <div class="table-container">
+                            <table id="grantsTable">
+                                <thead>
+                                    <tr>
+                                        <th>Grant Name</th>
+                                        <th>Donor</th>
+                                        <th>Start Date</th>
+                                        <th>End Date</th>
+                                        <th class="text-right">Amount</th>
+                                        <th class="text-right">Spent</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="grantsTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Compliance Reports Page (NGO Mode) -->
+                <div id="page-compliance" class="hidden">
+                    <div class="page-header">
+                        <h1 class="page-title">Compliance Reports</h1>
+                        <p class="page-subtitle">Generate donor compliance and audit reports</p>
+                    </div>
+                    
+                    <div class="stats-grid mb-3">
+                        <div class="stat-card">
+                            <div class="stat-label">Active Grants</div>
+                            <div class="stat-value">5</div>
+                            <div class="stat-change positive"><span>↑</span> 2 new this year</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">Compliance Rate</div>
+                            <div class="stat-value">98%</div>
+                            <div class="stat-change positive"><span>✓</span> On track</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-label">Reports Due</div>
+                            <div class="stat-value">3</div>
+                            <div class="stat-change negative"><span>!</span> Within 30 days</div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            <h2 class="card-title">Generate Compliance Report</h2>
+                        </div>
+                        <form onsubmit="event.preventDefault(); showNotification('Compliance report generation coming soon!', false, 'info');">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-label">Report Type *</label>
+                                    <select class="form-select" required>
+                                        <option value="">Select Report Type</option>
+                                        <option value="financial">Financial Report</option>
+                                        <option value="narrative">Narrative Report</option>
+                                        <option value="activity">Activity Report</option>
+                                        <option value="audit">Audit Report</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Donor/Grant *</label>
+                                    <select class="form-select" required>
+                                        <option value="">Select Grant</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Period From *</label>
+                                    <input type="date" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Period To *</label>
+                                    <input type="date" class="form-input" required>
+                                </div>
+                            </div>
+                            <div class="btn-group">
+                                <button type="submit" class="btn btn-primary">Generate Report</button>
+                                <button type="button" class="btn btn-secondary" onclick="showNotification('Preview functionality coming soon!', false, 'info')">Preview</button>
+                            </div>
+                        </form>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Recent Compliance Reports</h2>
+                        </div>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Report Name</th>
+                                        <th>Type</th>
+                                        <th>Grant</th>
+                                        <th>Period</th>
+                                        <th>Generated</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="6" class="text-center">No compliance reports yet. Generate one above.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Payroll Page (Corporate Mode) -->
+                <div id="page-payroll" class="hidden">
+                    <div class="page-header">
+                        <h1 class="page-title">Payroll Management</h1>
+                        <p class="page-subtitle">Process employee salaries and wages</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Payroll Records</h2>
+                            <button class="btn btn-primary" onclick="showPayrollModal()">+ New Payroll</button>
+                        </div>
+                        <div class="table-container">
+                            <table id="payrollTable">
+                                <thead>
+                                    <tr>
+                                        <th>Period</th>
+                                        <th>Employees</th>
+                                        <th class="text-right">Gross Pay</th>
+                                        <th class="text-right">Deductions</th>
+                                        <th class="text-right">Net Pay</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="payrollTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Fixed Assets Page (Corporate Mode) -->
+                <div id="page-assets" class="hidden">
+                    <div class="page-header">
+                        <h1 class="page-title">Fixed Assets</h1>
+                        <p class="page-subtitle">Manage company assets and depreciation</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Asset Register</h2>
+                            <button class="btn btn-primary" onclick="showNotification('Asset management functionality coming soon!', false, 'info')">+ Add Asset</button>
+                        </div>
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Asset ID</th>
+                                        <th>Description</th>
+                                        <th>Category</th>
+                                        <th>Purchase Date</th>
+                                        <th class="text-right">Cost</th>
+                                        <th class="text-right">Depreciation</th>
+                                        <th class="text-right">Net Book Value</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td colspan="8" class="text-center">No fixed assets found. This feature will be available soon.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Bank Reconciliation Page -->
+                <div id="page-bank-reconciliation" class="hidden">
+                    <div class="page-header">
+                        <h1 class="page-title">Bank Reconciliation</h1>
+                        <p class="page-subtitle">Reconcile bank statements with book records</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Reconciliation</h2>
+                            <button class="btn btn-primary" onclick="showNotification('Bank reconciliation functionality coming soon!', false, 'info')">+ New Reconciliation</button>
+                        </div>
+                        <div style="padding: 40px; text-align: center; color: var(--text-secondary);">
+                            <p>Bank reconciliation feature is under development.</p>
+                            <p>This will allow you to match bank transactions with your accounting records.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Management Page -->
+                <div id="page-team" class="hidden">
+                    <div class="page-header">
+                        <h1 class="page-title">Team Management</h1>
+                        <p class="page-subtitle">Manage team members and access permissions</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Team Members</h2>
+                            <button class="btn btn-primary" onclick="showTeamMemberModal()">+ Add Team Member</button>
+                        </div>
+                        <div class="table-container">
+                            <table id="teamTable">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Role</th>
+                                        <th>Department</th>
+                                        <th>Phone</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="teamTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Company Profile Page -->
+                <div id="page-company-profile" class="hidden">
+                    <div class="page-header">
+                        <h1 class="page-title">Company Profile</h1>
+                        <p class="page-subtitle">Update your organization's information</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Organization Details</h2>
+                        </div>
+                        <form id="companyProfileForm" onsubmit="saveCompanyProfile(event)">
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label class="form-label">Company Name *</label>
+                                    <input type="text" class="form-input" id="companyName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Tax ID</label>
+                                    <input type="text" class="form-input" id="companyTaxId">
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Email *</label>
+                                    <input type="email" class="form-input" id="companyEmail" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Phone *</label>
+                                    <input type="tel" class="form-input" id="companyPhone" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Website</label>
+                                    <input type="url" class="form-input" id="companyWebsite" placeholder="https://www.example.com">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Address *</label>
+                                <textarea class="form-textarea" id="companyAddress" rows="3" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Company Logo</label>
+                                <input type="file" class="form-input" id="companyLogo" accept="image/*">
+                                <div id="currentLogoPreview" style="display: none; margin-top: 10px;">
+                                    <img id="currentLogo" src="" alt="Company Logo" style="max-width: 200px; border-radius: 8px;">
+                                </div>
+                            </div>
+                            <div class="btn-group">
+                                <button type="submit" class="btn btn-primary">Save Profile</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+                <!-- Journal Entries Page -->
+                <div id="page-journal" class="hidden">
+                    <div class="page-header">
+                        <h1 class="page-title">Journal Entries</h1>
+                        <p class="page-subtitle">Record and manage accounting transactions</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">General Journal</h2>
+                            <button class="btn btn-primary" onclick="showModal('journalModal')">+ New Entry</button>
+                        </div>
+                        <div class="table-container">
+                            <table id="journalTable">
+                                <thead><tr><th>Entry #</th><th>Date</th><th>Description</th><th class="text-right">Debit</th><th class="text-right">Credit</th><th>Status</th><th>Actions</th></tr></thead>
+                                <tbody id="journalTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Chart of Accounts Page -->
+                <div id="page-chart-of-accounts" class="hidden">
+                    <div class="page-header">
+                        <h1 class="page-title">Chart of Accounts</h1>
+                        <p class="page-subtitle">IFRS 18 Compliant Account Structure</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">General Ledger Accounts</h2>
+                            <button class="btn btn-primary" onclick="showModal('accountModal')">+ New Account</button>
+                        </div>
+                        <div class="table-container">
+                            <table id="accountsTable">
+                                <thead><tr><th>Account Code</th><th>Account Name</th><th>Type</th><th>Category</th><th class="text-right">Balance</th><th>Actions</th></tr></thead>
+                                <tbody id="accountsTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Income Statement Page -->
+                <div id="page-income-statement" class="hidden">
+                    <div class="page-header">
+                        <h1 class="page-title">Statement of Profit or Loss</h1>
+                        <p class="page-subtitle">IFRS 18 Format - For the Year Ended December 31, 2024</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Comprehensive Income Statement</h2>
+                            <div class="btn-group">
+                                <button class="btn btn-secondary" onclick="exportReport('income-statement')">📥 Export PDF</button>
+                                <button class="btn btn-primary" onclick="window.print()">🖨️ Print</button>
+                            </div>
+                        </div>
+                        
+                        <!-- IFRS 18 Income Statement Content -->
+                        <div id="incomeStatementContent">
+                            <!-- Dynamically generated -->
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Balance Sheet Page -->
+                <div id="page-balance-sheet" class="hidden">
+                    <div class="page-header">
+                        <h1 class="page-title">Statement of Financial Position</h1>
+                        <p class="page-subtitle">As at December 31, 2024</p>
+                    </div>
+                    
+                    <div class="card">
+                        <div class="card-header">
+                            <h2 class="card-title">Balance Sheet (IFRS Format)</h2>
+                            <div class="btn-group">
+                                <button class="btn btn-secondary" onclick="exportReport('balance-sheet')">📥 Export PDF</button>
+                                <button class="btn btn-primary" onclick="window.print()">🖨️ Print</button>
+                            </div>
+                        </div>
+                        
+                        <!-- IFRS Balance Sheet Content -->
+                        <div id="balanceSheetContent">
+                            <!-- Dynamically generated -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modals -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('loginModal')">×</button>
+            <div class="modal-header">
+                <h2 class="modal-title">Sign In to FinanceCore</h2>
+            </div>
+            <form onsubmit="handleLogin(event)">
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-input" placeholder="your@email.com" id="loginEmail" required>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-input" placeholder="Enter your password" id="loginPassword" required>
+                </div>
+                <div class="form-group" style="display: flex; align-items: center; gap: 8px; margin-bottom: 20px;">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe" style="font-size: 14px;">Remember me</label>
+                </div>
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">Sign In</button>
+                    <button type="button" class="btn btn-outline" onclick="showSignupModal()">Create Account</button>
+                </div>
+                <div style="text-align: center; margin-top: 16px;">
+                    <a href="#" style="font-size: 14px; color: var(--primary);">Forgot password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal('signupModal')">×</button>
+            <div class="modal-header">
+                <h2 class="modal-title">Create Your Account</h2>
+            </div>
+            <form onsubmit="handleSignup(event)">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-input" placeholder="John Doe" id="signupName" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Company Name</label>
+                        <input type="text" class="form-input" placeholder="Your Company Ltd" id="signupCompany" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-input" placeholder="your@email.com" id="signupEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" class="form-input" placeholder="+265 xxx xxx xxx" id="signupPhone">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-input" placeholder="Create a password" id="signupPassword" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Confirm Password</label>
+                        <input type="password" class="form-input" placeholder="Confirm your password" id="signupConfirmPassword" required>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-bottom: 20px;">
+                    <input type="checkbox" id="termsAgree" required>
+                    <label for="termsAgree" style="font-size: 14px;">
+                        I agree to the <a href="#" onclick="showTermsModal()">Terms of Service</a> and <a href="#" onclick="showPrivacyModal()">Privacy Policy</a>
+                    </label>
+                </div>
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-primary">Create Account & Start Trial</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification">
+        <span id="notificationText"></span>
+    </div>
+
+    <!-- JavaScript Files -->
+
+    <!-- JavaScript Files -->
+    <script src="app.js"></script>
+    <script src="landing.js"></script>
+    <script src="tax-system.js"></script>
+    <script src="invoice-system.js"></script>
+    <script src="ifrs18.js"></script>
+    <script src="all-modules.js"></script>
+</body>
+</html>

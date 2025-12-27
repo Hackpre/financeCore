@@ -1,0 +1,126 @@
+/* CSS Reset / Normalize */
+:root {
+    --primary: #2563eb; 
+    --primary-light: #3b82f6; 
+    --primary-dark: #1e40af;
+    --secondary: #8b5cf6; 
+    --accent: #f59e0b; 
+    --danger: #ef4444;
+    --success: #10b981; 
+    --warning: #f59e0b; 
+    --info: #06b6d4;
+    --bg-primary: #ffffff; 
+    --bg-secondary: #f9fafb; 
+    --bg-tertiary: #f3f4f6;
+    --text-primary: #111827; 
+    --text-secondary: #6b7280; 
+    --border: #e5e7eb;
+    --shadow: rgba(0, 0, 0, 0.05); 
+    --shadow-heavy: rgba(0, 0, 0, 0.1);
+    --sidebar-bg: #1f2937; 
+    --sidebar-hover: #374151;
+}
+
+[data-theme="dark"] {
+    --primary: #3b82f6; 
+    --primary-light: #60a5fa; 
+    --primary-dark: #2563eb;
+    --secondary: #a78bfa; 
+    --accent: #fbbf24; 
+    --danger: #f87171;
+    --success: #34d399; 
+    --warning: #fbbf24; 
+    --info: #22d3ee;
+    --bg-primary: #111827; 
+    --bg-secondary: #1f2937; 
+    --bg-tertiary: #374151;
+    --text-primary: #f9fafb; 
+    --text-secondary: #d1d5db; 
+    --border: #374151;
+    --shadow: rgba(0, 0, 0, 0.3); 
+    --shadow-heavy: rgba(0, 0, 0, 0.5);
+    --sidebar-bg: #0f172a; 
+    --sidebar-hover: #1e293b;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Page Switching */
+#landingPage, #mainApp {
+    transition: opacity 0.3s ease;
+}
+
+#landingPage {
+    position: relative;
+    z-index: 10;
+}
+
+#mainApp {
+    position: relative;
+    z-index: 20;
+}
+
+.app-mode #landingPage {
+    display: none !important;
+}
+
+.app-mode #mainApp {
+    display: flex !important;
+}
+
+#landingPage {
+    display: block;
+}
+
+#mainApp {
+    display: none;
+}
+
+#landingPage[style*="display: none"],
+#mainApp[style*="display: none"] {
+    display: none !important;
+}
+
+#landingPage.hidden,
+#mainApp.hidden {
+    display: none !important;
+}
+
+/* Print Styles */
+@media print {
+    .sidebar, .top-bar, .btn, .action-btn, 
+    .mobile-menu-btn, .user-avatar, .search-bar,
+    .nav-menu, .settings-bar { 
+        display: none !important; 
+    }
+    
+    .main-content { 
+        margin: 0 !important; 
+        padding: 0 !important;
+    }
+    
+    .card { 
+        break-inside: avoid; 
+        box-shadow: none !important; 
+        border: 1px solid #000 !important;
+        margin-bottom: 20px !important;
+    }
+    
+    body { 
+        background: white !important; 
+        color: black !important;
+    }
+}
