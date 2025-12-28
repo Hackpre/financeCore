@@ -1159,25 +1159,166 @@
                 </div>
                 
                 <!-- Journal Entries Page -->
-                <div id="page-journal" class="hidden">
-                    <div class="page-header">
-                        <h1 class="page-title">Journal Entries</h1>
-                        <p class="page-subtitle">Record and manage accounting transactions</p>
+            <div id="page-journal" class="hidden">
+    <div class="page-header">
+        <h1 class="page-title">Journal Entries</h1>
+        <p class="page-subtitle">Record and manage accounting transactions - Automatically updates Financial Statements</p>
+    </div>
+    
+    <!-- Summary Statistics -->
+    <div class="stats-grid mb-3">
+        <div class="stat-card">
+            <div class="stat-label">Total Entries</div>
+            <div class="stat-value" id="totalJournalEntriesStat">0</div>
+            <div class="stat-change">All journal entries</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Draft Entries</div>
+            <div class="stat-value" id="draftJournalEntriesStat">0</div>
+            <div class="stat-change" style="color: var(--warning);">Awaiting posting</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Posted Entries</div>
+            <div class="stat-value" id="postedJournalEntriesStat">0</div>
+            <div class="stat-change positive">Finalized</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Balance Status</div>
+            <div class="stat-value" id="journalBalanceStat" style="font-size: 16px;">-</div>
+            <div class="stat-change">Debits vs Credits</div>
+        </div>
+    </div>
+    
+    <!-- Filters Card -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <h3 class="card-title">🔍 Filters</h3>
+            <button class="btn btn-outline btn-sm" onclick="clearJournalFilters()">Clear All</button>
+        </div>
+        <div class="form-grid" style="padding: 20px;">
+            <div class="form-group">
+                <label class="form-label">Status</label>
+                <select class="form-select" id="journalStatusFilter" onchange="applyJournalFilters()">
+                    <option value="all">All Status</option>
+                    <option value="draft">Draft Only</option>
+                    <option value="posted">Posted Only</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">From Date</label>
+                <input type="date" class="form-input" id="journalStartDate" onchange="applyJournalFilters()">
+            </div>
+            <div class="form-group">
+                <label class="form-label">To Date</label>
+                <input type="date" class="form-input" id="journalEndDate" onchange="applyJournalFilters()">
+            </div>
+            <div class="form-group">
+                <label class="form-label">Search</label>
+                <input type="text" class="form-input" id="journalSearchInput" 
+                       placeholder="Entry #, description, reference..." 
+                       oninput="applyJournalFilters()">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Journal Entries Table -->
+    <div class="card">
+        <div class="card-header">
+            <h2 class="card-title">General Journal</h2>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <button class="btn btn-secondary btn-sm" onclick="exportJournalToCSV()">📊 CSV</button>
+                <button class="btn btn-success btn-sm" onclick="exportJournalToExcel()">📗 Excel</button>
+                <button class="btn btn-outline btn-sm" onclick="exportJournalToPDF()">📄 PDF</button>
+                <button class="btn btn-primary" onclick="showJournalModal()">+ New Entry</button>
+            </div>
+        </div>
+        <div class="table-container">
+            <table id="journalTable">
+                <thead>
+                    <tr>
+                        <th>Entry #</th>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Reference</th>
+                        <th class="text-right">Debit</th>
+                        <th class="text-right">Credit</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="journalTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- Help Section -->
+    <div class="card mt-3">
+        <div class="card-header">
+            <h3 class="card-title">💡 Journal Entry Guidelines</h3>
+        </div>
+        <div style="padding: 20px;">
+            <div class="mb-3">
+                <h4 style="margin-bottom: 8px;">Double-Entry Bookkeeping Rules:</h4>
+                <ul style="margin-left: 20px; line-height: 2;">
+                    <li><strong>Balance Required:</strong> Total Debits must equal Total Credits</li>
+                    <li><strong>Minimum Lines:</strong> At least 2 lines (one debit, one credit)</li>
+                    <li><strong>Draft vs Posted:</strong> Draft entries can be edited; Posted entries update account balances</li>
+                    <li><strong>Posted Entries:</strong> Cannot be edited or deleted - use Reverse instead</li>
+                    <li><strong>Reversing:</strong> Creates a new entry with opposite debits/credits</li>
+                </ul>
+            </div>
+            
+            <div class="mb-3">
+                <h4 style="margin-bottom: 8px;">Debit and Credit Rules:</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16px;">
+                    <div style="padding: 12px; background: rgba(59,130,246,0.1); border-left: 4px solid var(--primary); border-radius: 4px;">
+                        <strong>Debit Increases:</strong><br>
+                        • Assets<br>
+                        • Expenses
                     </div>
-                    
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">General Journal</h2>
-                            <button class="btn btn-primary" onclick="showModal('journalModal')">+ New Entry</button>
-                        </div>
-                        <div class="table-container">
-                            <table id="journalTable">
-                                <thead><tr><th>Entry #</th><th>Date</th><th>Description</th><th class="text-right">Debit</th><th class="text-right">Credit</th><th>Status</th><th>Actions</th></tr></thead>
-                                <tbody id="journalTableBody"></tbody>
-                            </table>
-                        </div>
+                    <div style="padding: 12px; background: rgba(16,185,129,0.1); border-left: 4px solid var(--success); border-radius: 4px;">
+                        <strong>Credit Increases:</strong><br>
+                        • Liabilities<br>
+                        • Equity<br>
+                        • Revenue
                     </div>
                 </div>
+            </div>
+            
+            <div>
+                <h4 style="margin-bottom: 8px;">Common Transaction Examples:</h4>
+                <div style="padding: 12px; background: var(--bg-tertiary); border-radius: 8px; font-family: monospace; font-size: 13px;">
+                    <strong>Cash Sale:</strong><br>
+                    Debit: Cash (Asset) | Credit: Sales Revenue<br><br>
+                    
+                    <strong>Purchase on Credit:</strong><br>
+                    Debit: Inventory (Asset) | Credit: Accounts Payable (Liability)<br><br>
+                    
+                    <strong>Pay Salary:</strong><br>
+                    Debit: Salaries Expense | Credit: Cash (Asset)<br><br>
+                    
+                    <strong>Receive Payment:</strong><br>
+                    Debit: Cash (Asset) | Credit: Accounts Receivable (Asset)
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Integration Info -->
+    <div class="card mt-3" style="background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(16,185,129,0.1)); border: 1px solid var(--primary);">
+        <div style="padding: 20px;">
+            <h4 style="margin-bottom: 12px;">🔗 Financial Statement Integration</h4>
+            <p style="line-height: 1.8;">
+                <strong>When you POST a journal entry:</strong><br>
+                ✅ Account balances automatically update in Chart of Accounts<br>
+                ✅ Balance Sheet reflects new account balances<br>
+                ✅ Income Statement shows updated revenue and expenses<br>
+                ✅ Trial Balance recalculates automatically<br>
+                ✅ Changes are permanent (use Reverse to correct)
+            </p>
+        </div>
+    </div>
+</div>
                 
                 <!-- Chart of Accounts Page -->
                <div id="page-chart-of-accounts" class="hidden">
