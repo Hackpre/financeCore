@@ -648,25 +648,119 @@
                 </div>
                 
                 <!-- Customers Page -->
-                <div id="page-customers" class="hidden">
-                    <div class="page-header">
-                        <h1 class="page-title">Customers</h1>
-                        <p class="page-subtitle">Manage customer relationships and accounts</p>
-                    </div>
-                    
-                    <div class="card">
-                        <div class="card-header">
-                            <h2 class="card-title">Customer List</h2>
-                            <button class="btn btn-primary" onclick="showModal('customerModal')">+ New Customer</button>
-                        </div>
-                        <div class="table-container">
-                            <table id="customersTable">
-                                <thead><tr><th>Customer Name</th><th>Contact Person</th><th>Email</th><th>Phone</th><th class="text-right">Receivables</th><th>Actions</th></tr></thead>
-                                <tbody id="customersTableBody"></tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
+              <div id="page-customers" class="hidden">
+    <div class="page-header">
+        <h1 class="page-title">Customers</h1>
+        <p class="page-subtitle">Manage customer relationships, credit limits, and receivables</p>
+    </div>
+    
+    <!-- Summary Statistics -->
+    <div class="stats-grid mb-3">
+        <div class="stat-card">
+            <div class="stat-label">Total Customers</div>
+            <div class="stat-value" id="totalCustomersStat">0</div>
+            <div class="stat-change">All customers</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Active Customers</div>
+            <div class="stat-value" id="activeCustomersStat">0</div>
+            <div class="stat-change positive">Currently active</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Total Receivables</div>
+            <div class="stat-value" id="totalReceivablesStat">MWK 0</div>
+            <div class="stat-change negative">Outstanding</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">Overdue Customers</div>
+            <div class="stat-value" id="overdueCustomersStat">0</div>
+            <div class="stat-change">Need follow-up</div>
+        </div>
+    </div>
+    
+    <!-- Filters Card -->
+    <div class="card mb-3">
+        <div class="card-header">
+            <h3 class="card-title">🔍 Filters</h3>
+            <button class="btn btn-outline btn-sm" onclick="clearCustomerFilters()">Clear All</button>
+        </div>
+        <div class="form-grid" style="padding: 20px;">
+            <div class="form-group">
+                <label class="form-label">Status</label>
+                <select class="form-select" id="customerStatusFilter" onchange="applyCustomerFilters()">
+                    <option value="all">All Status</option>
+                    <option value="active">Active Only</option>
+                    <option value="inactive">Inactive Only</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Category</label>
+                <select class="form-select" id="customerCategoryFilter" onchange="applyCustomerFilters()">
+                    <option value="all">All Categories</option>
+                    <option value="General">General</option>
+                    <option value="Corporate">Corporate</option>
+                    <option value="Government">Government</option>
+                    <option value="NGO">NGO</option>
+                    <option value="SME">SME</option>
+                    <option value="Individual">Individual</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label class="form-label">Search</label>
+                <input type="text" class="form-input" id="customerSearchInput" 
+                       placeholder="Name, email, phone, code..." 
+                       oninput="applyCustomerFilters()">
+            </div>
+        </div>
+    </div>
+    
+    <!-- Customers Table -->
+    <div class="card">
+        <div class="card-header">
+            <h2 class="card-title">Customer List</h2>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <button class="btn btn-outline btn-sm" onclick="showAgingReport()">📊 Aging Report</button>
+                <button class="btn btn-outline btn-sm" onclick="showImportCustomersModal()">📤 Import</button>
+                <button class="btn btn-secondary btn-sm" onclick="exportCustomersToCSV()">📄 CSV</button>
+                <button class="btn btn-success btn-sm" onclick="exportCustomersToExcel()">📗 Excel</button>
+                <button class="btn btn-primary" onclick="showCustomerModal()">+ New Customer</button>
+            </div>
+        </div>
+        <div class="table-container">
+            <table id="customersTable">
+                <thead>
+                    <tr>
+                        <th>Customer Code</th>
+                        <th>Contact Person</th>
+                        <th>Email & Phone</th>
+                        <th>Category</th>
+                        <th class="text-right">Receivables</th>
+                        <th class="text-right">Credit Limit</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="customersTableBody"></tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- Quick Tips -->
+    <div class="card mt-3">
+        <div class="card-header">
+            <h3 class="card-title">💡 Quick Tips</h3>
+        </div>
+        <ul style="padding: 20px; margin-left: 20px; line-height: 2;">
+            <li><strong>Credit Limit:</strong> Set maximum amount customer can owe. System warns at 80% usage.</li>
+            <li><strong>Payment Terms:</strong> Defines when payment is due (e.g., Net 30 = due in 30 days).</li>
+            <li><strong>Receivables:</strong> Automatically calculated from unpaid invoices.</li>
+            <li><strong>Customer Statement:</strong> Click view to see transaction history and generate statements.</li>
+            <li><strong>Aging Report:</strong> Shows how long receivables have been outstanding.</li>
+            <li><strong>Categories:</strong> Organize customers by type for better reporting and analysis.</li>
+        </ul>
+    </div>
+</div>
+
                 
                 <!-- Products Page -->
                 <div id="page-products" class="hidden">
